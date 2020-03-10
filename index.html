@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>To-Do-List</h1>
+        <select name="Level" id="checkBox">
+            <option disabled>Level:</option>
+            <option value="1">Priority</option>
+            <option value="2">Maybe</option>
+            <option value="3">Not rush</option>
+          </select>
+    <input autofocus id="todoInput" placeholder="Add a to do" type="text"/>
+      <button onclick="addItem()" >Add</button>
+      </div>
+      <button onclick="all()">
+        <span>All</span></button>
+        <button id="countA"></button>
+        <button onclick="done()">
+        <span>UnDone</span></button>
+        <button id="countB"></button>
+        <button onclick="done()">
+        <span>Done</span></button>
+        <button id="countC"></button>
+      <ul id="resultArea"></ul>
+      
+    
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
