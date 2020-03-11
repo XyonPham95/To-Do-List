@@ -9,7 +9,7 @@ let addItem = () => {
   let seclect = checkBox.value;
   todoList.push({
     text: todoValue,
-    done: false,
+    isDone: false,
     number: seclect
   });
   saveData();
@@ -30,8 +30,9 @@ function toggleDone(index) {
 }
 
 let showUndone = () => {
+  let newArray =[];
   if (document.getElementById("myCheck").checked == true) {
-    let newArray = todoList.filter((item) => item.isDone == false);
+    newArray = todoList.filter((item) => item.isDone == false);
     console.log(newArray);
     render(newArray);
     
