@@ -17,7 +17,7 @@
           </select>
     <input autofocus id="todoInput" placeholder="Add a to do" type="text"/>
       <button onclick="addItem()" >Add</button>
-      <input type="checkbox" id="myCheck" name="myCheck" value="Done/UnDone">
+      <input type="checkbox" id="myCheck" name="myCheck" onchange="showUndone()"value="Done/UnDone">
         <label>Done/UnDone</label>
       </div>
       <button onclick="all()">

@@ -27,9 +27,9 @@ function toggleDone(index) {
 
   saveData();
   render(todoList);
-}
-
+} 
 let showUndone = () => {
+  console.log("herehrehrehr");
   let newArray =[];
   if (document.getElementById("myCheck").checked == true) {
     newArray = todoList.filter((item) => item.isDone == false);
@@ -46,14 +46,14 @@ let showUndone = () => {
 let render = (array) => {
   let htmltoArray = array.map((item, index) => {
     if ((item.isDone == false)) {
-      return `<li> ${item.text} ${item.number} <button onclick="removeItem(${index})">X</button> <button onclick="toggleDone(${index})"> UnDone </button></li>`.strike();
+      return `<li> ${item.text} ${item.number} <button onclick="removeItem(${index})">X</button> <button onclick="toggleDone(${index})"> Done </button></li>`
     } else {
-      return `<li> ${item.text} ${item.number} <button onclick="removeItem(${index})">X</button> <button onclick="toggleDone(${index})"> Done </button></li>`;
+      return `<li> ${item.text} ${item.number} <button onclick="removeItem(${index})">X</button> <button onclick="toggleDone(${index})"> UnDone </button></li>`.strike();;
     }
   }).join("");
 
   
-  document.getElementById("resultArea").innerHTML = htmltoArray;
+  document.getElementById("resultArea").innerHTML = htmltoArray;  
   document.getElementById("countA").innerHTML = todoList.length;
 };
 
@@ -67,8 +67,6 @@ function getData(){
     if (data == null){
         todoList=[];
     }else{let result = JSON.parse(data);
-    todoList =result;
-    render(todoList);}
-}
+    todoList =result; 
 
-
+    }}
